@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+ <!-- para lor archivos de tipo html dentro de la etiqueta xmlns:th= referenciamos a Thymeleaf para el usos de nuestras plantillas html dinamiscas -->
+<head>
+	<meta charset="UTF-8">
+	<title>Mi primer proyecto con Spring</title><!-- Titulo de la pesataña de la pagina -->
+	<style>
+		html {
+			font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;/*Agramos el tipo de fuente para la letra de la paagina*/
+			color: #404040;/*color de la letra*/
+			background-color: #d3d3d3;/*Color del fondo de la pagina*/
+		}
+
+		body {
+			padding: 5em;/*espacio entre el contenido del elemento y su borde en este caso, el contenido que este detro de la etiqueta "body"*/
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Nombre: <span th:text="${Nombre}"></span> </h1><!-- Encabezado de la pagina -->
+	<p>
+		Fecha y hora: <span th:text="${tiempo}"></span>										<!-- Se muestra el valor del atributo "tiempo" enviado por el metodo -->
+	</p>
+</body>
+</html>
